@@ -5,14 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My New Years Resolution</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .resolution {
+            width: 100%;
+            display: block;
+            margin: 100px auto;
+        }
+
+        .cover {
+            width: 100%;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            position: relative;
+            color: white;
+            background: transparent;
+            left: 50px;
+        }
+    </style>
 </head>
 
 <body>
     <h1>2025 Resolution</h1>
     <div class="resolution" id="resolution">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/154/727/original/pexels-maltelu-1234390.jpg?1736784316"
+            alt="image" class="cover">
+        <div class="card">
+            <ul>
+                <li>Hello</li>
+                <li>Hi</li>
+                <li>Thanks</li>
+            </ul>
+        </div>
+        <div class="card">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="card">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
         <p><span>←</span> <span>→</span></p>
     </div>
 </body>
