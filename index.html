@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My New Years Resolution</title>
+    <title>My New Year's Resolution</title>
     <style>
         body {
             text-align: center;
@@ -21,7 +21,6 @@
             height: 350px;
             display: block;
             margin: 0 auto;
-            left: 0;
             padding: 60px;
             border-radius: 20px;
         }
@@ -37,19 +36,18 @@
             border-radius: 30px;
             background: rgba(252, 250, 232, 0.8);
             border: none;
-            margin-top: 50px;
             float: right;
+            margin-top: 30px;
             font-weight: bold;
         }
 
         #content {
             background: beige;
-            padding: 20px;
+            padding: 30px;
             width: 550px;
-            height: 500px;
+            height: 550px;
             display: block;
             margin: 0 auto;
-            padding: 60px;
             margin-top: 20px;
             border-radius: 20px;
         }
@@ -58,7 +56,7 @@
             background: transparent;
             padding: 30px;
             min-width: 400px;
-            margin-top: 60px;
+            margin-top: 70px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
         }
@@ -69,11 +67,10 @@
             color: beige;
             border-radius: 10px;
             padding: 10px;
-            margin: 5px;
+            margin: 10px;
             text-align: center;
             font-size: 20px;
         }
-
 
         .hidden {
             display: none;
@@ -84,15 +81,13 @@
 <body>
     <div id="content">
         <h1>New Year, New Me!!!</h1>
-        <div class="resolution" id="resolution">
+        <div class="resolution">
             <div class="Message">
-                <p><span>
-                        Here's My 2025 New Years resolution
-                    </span>
+                <p>
+                    Here's My 2025 New Year's resolution
                 </p>
             </div>
             <button onclick="showResolution()">CLICK ME 😁</button>
-            <br>
             <div class="cards hidden" id="card-element">
                 <div class="card">
                     <ul>
@@ -124,13 +119,12 @@
 
     <script>
         function showResolution() {
-            let cardsElement = document.getElementsById("card-element");
-            if (cardsElement.style.display === "none" || cardsElement.classList.contains("hidden")) {
-                cardsElement.style.display = "grid";
-                cardsElement.classList.remove("hidden");
+            let cardsElement = document.getElementById("card-element");
 
+            // Toggle the "hidden" class
+            if (cardsElement.classList.contains("hidden")) {
+                cardsElement.classList.remove("hidden");
             } else {
-                cardsElement.style.display = "none";
                 cardsElement.classList.add("hidden");
             }
         }
