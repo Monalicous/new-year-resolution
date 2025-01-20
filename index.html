@@ -11,55 +11,130 @@
             font-family: 'Courier New', Courier, monospace;
         }
 
-        .resolution {
-            width: 100%;
-            display: block;
-            margin: 100px auto;
+        h1 {
+            box-shadow: rgba(249, 250, 209, 0.8);
         }
 
-        .cover {
-            width: 100%;
+        .resolution {
+            background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/154/727/original/pexels-maltelu-1234390.jpg?1736784316") no-repeat center center/cover;
+            width: 750px;
+            height: 350px;
+            display: block;
+            margin: 0 auto;
+            left: 0;
+            padding: 60px;
+            border-radius: 20px;
+        }
+
+        p {
+            color: beige;
+            font-size: 30px;
+        }
+
+        button {
+            width: 180px;
+            padding: 10px;
+            border-radius: 30px;
+            background: rgba(252, 250, 232, 0.8);
+            border: none;
+            margin-top: 50px;
+            float: right;
+            font-weight: bold;
+        }
+
+        #content {
+            background: beige;
+            padding: 20px;
+            width: 550px;
+            height: 500px;
+            display: block;
+            margin: 0 auto;
+            padding: 60px;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+
+        .cards {
+            background: transparent;
+            padding: 30px;
+            min-width: 400px;
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
         }
 
         .card {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            position: relative;
-            color: white;
-            background: transparent;
-            left: 50px;
+            background: rgba(120, 120, 120, 0.4);
+            width: 170px;
+            color: beige;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 
 <body>
-    <h1>2025 Resolution</h1>
-    <div class="resolution" id="resolution">
-        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/154/727/original/pexels-maltelu-1234390.jpg?1736784316"
-            alt="image" class="cover">
-        <div class="card">
-            <ul>
-                <li>Hello</li>
-                <li>Hi</li>
-                <li>Thanks</li>
-            </ul>
+    <div id="content">
+        <h1>New Year, New Me!!!</h1>
+        <div class="resolution" id="resolution">
+            <div class="Message">
+                <p><span>
+                        Here's My 2025 New Years resolution
+                    </span>
+                </p>
+            </div>
+            <button onclick="showResolution()">CLICK ME 😁</button>
+            <br>
+            <div class="cards hidden" id="card-element">
+                <div class="card">
+                    <ul>
+                        <li>Gyming</li>
+                        <li>Praying</li>
+                        <li>Meditate</li>
+                        <li>Reading</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <ul>
+                        <li>Budgeting</li>
+                        <li>Saving</li>
+                        <li>Traveling</li>
+                        <li>Investing</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <ul>
+                        <li>Journaling</li>
+                        <li>House Hunting</li>
+                        <li>Studying</li>
+                        <li>Freelancing</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        <div class="card">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        <p><span>←</span> <span>→</span></p>
     </div>
+
+    <script>
+        function showResolution() {
+            let cardsElement = document.getElementsById("card-element");
+            if (cardsElement.style.display === "none" || cardsElement.classList.contains("hidden")) {
+                cardsElement.style.display = "grid";
+                cardsElement.classList.remove("hidden");
+
+            } else {
+                cardsElement.style.display = "none";
+                cardsElement.classList.add("hidden");
+            }
+        }
+    </script>
 </body>
 
 </html>
