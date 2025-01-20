@@ -9,10 +9,8 @@
         body {
             text-align: center;
             font-family: 'Courier New', Courier, monospace;
-        }
-
-        h1 {
-            box-shadow: rgba(249, 250, 209, 0.8);
+            background: cornsilk;
+            height: 100vh;
         }
 
         .resolution {
@@ -42,7 +40,7 @@
         }
 
         #content {
-            background: beige;
+            background: blanchedalmond;
             padding: 30px;
             width: 550px;
             height: 550px;
@@ -75,6 +73,10 @@
         .hidden {
             display: none;
         }
+
+        footer {
+            color: gray;
+        }
     </style>
 </head>
 
@@ -84,7 +86,7 @@
         <div class="resolution">
             <div class="Message">
                 <p>
-                    Here's My 2025 New Year's resolution
+                    Here's My 2025 New Year's Resolution
                 </p>
             </div>
             <button onclick="showResolution()">CLICK ME 😁</button>
@@ -116,6 +118,8 @@
             </div>
         </div>
     </div>
+
+    <footer>Coded by <small>Samukelisiwe Monalisa Ntusi</small> &copy; 2025</footer>
 
     <script>
         function showResolution() {
